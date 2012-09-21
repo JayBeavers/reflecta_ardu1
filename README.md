@@ -1,14 +1,34 @@
 # ReflectaArduinoCore #
 
-Reflecta Arduino Core binds the functions pinMode, digitalRead, digitalWrite, analogRead, and analogWrite to the ARDU1 interface.  This is the Arduino library that enables the 'send' side of the Reflecta conversation.
+Reflecta Arduino Core binds the functions pinMode, digitalRead, digitalWrite, analogRead, and analogWrite to the ardu1 interface.  This is the Arduino library that enables the 'send' side of the Reflecta conversation.
 
 > _Stability: Medium_
 
 ## Calling ReflectaArduinoCore from NodeJS
 
-The NodeJS client can be found [here](https://github.com/jaybeavers/node-reflecta/blob/master/node_modules/reflecta_ARDU1.js).
+Simply load reflecta using
 
-## To Be Documented -- Calling ReflectaArduinoCore 'raw' just using ReflectaFunctions
+```
+npm install reflecta
+```
+
+```javascript
+var reflecta = require('reflecta');
+
+reflecta.detect(function(error, boards, ports) {
+
+    board = boards[0];
+
+    if (board.ardu1) {
+        board.ardu1.pinMode(ledPin, board.ardu1.OUTPUT);
+        board.ardu1.digitalWrite(ledPin, 1);
+    }
+});
+```
+
+Reflecta will use npm to install and load this library automatically if the Arduino exposes the 'ardu1' interface.
+
+A [simple but complete example](https://github.com/JayBeavers/node-reflecta/blob/master/samples/simple.js) can be found in the node-reflecta project.
 
 ## Release History
 

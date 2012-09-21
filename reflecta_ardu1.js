@@ -72,7 +72,7 @@ module.exports = function(reflecta, interfaceStart) {
       write : function(value) {
         reflecta.sendFrame( [reflecta.FunctionIds.pushArray, 1, value, interfaceStart + 11] );
       },
- []
+ 
       endTransmission : function() {
         reflecta.sendFrame( [interfaceStart + 12] );
       }

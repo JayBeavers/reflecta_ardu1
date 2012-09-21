@@ -1,7 +1,7 @@
 {
   "name": "reflecta_ardu1",
   "description": "Node.js client for the Reflecta ardu1 interface for Arduino core functions like gpio, Wire, and Servo",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/JayBeavers/reflecta_ardu1",
   "author": {
     "name": "Jay Beavers",
@@ -21,7 +21,7 @@
       "url": "https://github.com/JayBeavers/jaybeavers/reflecta_ardu1/blob/master/LICENSE"
     }
   ],
-  "main": "reflecta",
+  "main": "reflecta_ardu1",
   "engines": {
     "node": ">= 0.8.1"
   }
